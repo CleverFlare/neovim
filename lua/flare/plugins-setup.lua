@@ -77,8 +77,9 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim")
 
 	-- formatting and linting
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("jay-babu/mason-null-ls.nvim")
+	use("stevearc/conform.nvim")
+	use({ "mfussenegger/nvim-lint", event = { "BufReadPre", "BufNewFile" } })
+	use("WhoIsSethDaniel/mason-tool-installer.nvim")
 
 	-- treesitter
 	use({
