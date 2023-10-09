@@ -1,13 +1,14 @@
-local setup, comment = pcall(require, "Comment")
-if not setup then
-  return
-end
-
-comment.setup({
-  toggler = {
-    line = "<leader>/"
-  },
-  opleader = {
-    line = "<leader>/"
-  }
-})
+return {
+  "numToStr/Comment.nvim",
+  event = { "BufReadPre", "BufNewFile" },
+  config = function()
+    require("Comment").setup({
+      toggler = {
+        line = "<leader>/"
+      },
+      opleader = {
+        line = "<leader>/"
+      }
+        })
+  end
+}

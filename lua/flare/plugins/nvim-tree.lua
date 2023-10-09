@@ -1,28 +1,32 @@
-local setup, nvimtree = pcall(require, "nvim-tree")
-if not setup then
-  return
-end
+return {
+  "nvim-tree/nvim-tree.lua",
+  depencancies = {
+    "nvim-tree/nvim-web-devicons"
+  },
+  config = function()
+    local nvimtree = require("nvim-tree")
+    -- disable netrw at the very start of your init.lua
+    vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
 
--- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-nvimtree.setup({
-  renderer = {
-    icons = {
-      glyphs = {
-        folder = {
-          arrow_closed = "", -- arrow when folder is closed
-          arrow_open = "", -- arrow when folder is open
+    nvimtree.setup({
+      renderer = {
+        icons = {
+          glyphs = {
+            folder = {
+              arrow_closed = "", -- arrow when folder is closed
+              arrow_open = "", -- arrow when folder is open
+            },
+          },
         },
       },
-    },
-  },
-  actions = {
-    open_file = {
-      window_picker = {
-        enable = false,
+      actions = {
+        open_file = {
+          window_picker = {
+            enable = false,
+          }
+        }
       }
-    }
-  }
-})
+    })
+  end
+}
