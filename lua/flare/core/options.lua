@@ -1,37 +1,37 @@
 local opt = vim.opt -- for conciseness
 
 local options = {
-  -- line numbers
-  relativenumber = true,
-  number = true,
-  
-  -- tabs & indentation
-  tabstop = 2,
-  shiftwidth = 2,
-  expandtab = true,
-  autoindent = true,
-  
-  -- line wrapping
-  wrap = false,
+	-- line numbers
+	relativenumber = true,
+	number = true,
 
-  -- search settings
-  ignorecase = true,
-  smartcase = true,
+	-- tabs & indentation
+	tabstop = 2,
+	shiftwidth = 2,
+	expandtab = true,
+	autoindent = true,
 
-  -- cursor line
-  cursorline = true,
+	-- line wrapping
+	wrap = false,
 
-  -- appearance
-  termguicolors = true,
-  background = "dark",
-  signcolumn = "yes",
+	-- search settings
+	ignorecase = true,
+	smartcase = true,
 
-  -- backspace
-  backspace = "indent,eol,start",
+	-- cursor line
+	cursorline = true,
 
-  -- split windows
-  splitright = true,
-  splitbelow = true
+	-- appearance
+	termguicolors = true,
+	background = "dark",
+	signcolumn = "yes",
+
+	-- backspace
+	backspace = "indent,eol,start",
+
+	-- split windows
+	splitright = true,
+	splitbelow = true,
 }
 
 opt.iskeyword:append("-")
@@ -40,6 +40,6 @@ opt.iskeyword:append("-")
 opt.clipboard:append("unnamedplus")
 
 -- loops through the options keyed table and assign each property and its value to the opt table
-for key,value in pairs(options) do
-  opt[key] = value
+for key, value in pairs(options) do
+	opt[key] = value
 end
