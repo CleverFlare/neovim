@@ -10,16 +10,16 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		nvimtree.setup({
-			renderer = {
-				icons = {
-					glyphs = {
-						folder = {
-							arrow_closed = "", -- arrow when folder is closed
-							arrow_open = "", -- arrow when folder is open
-						},
-					},
-				},
-			},
+			-- renderer = {
+			-- 	icons = {
+			-- 		glyphs = {
+			-- 			folder = {
+			-- 				arrow_closed = "", -- arrow when folder is closed
+			-- 				arrow_open = "", -- arrow when folder is open
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
 			actions = {
 				open_file = {
 					window_picker = {
