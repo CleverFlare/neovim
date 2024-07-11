@@ -20,6 +20,9 @@ return {
 			-- 		},
 			-- 	},
 			-- },
+			git = {
+				ignore = false,
+			},
 			actions = {
 				open_file = {
 					window_picker = {
