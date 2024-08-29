@@ -1,45 +1,39 @@
-local opt = vim.opt -- for conciseness
+vim.cmd("let g:netrw_liststyle = 3")
 
-local options = {
-	-- line numbers
-	relativenumber = true,
-	number = true,
+local opt = vim.opt
 
-	-- tabs & indentation
-	tabstop = 2,
-	shiftwidth = 2,
-	expandtab = true,
-	autoindent = true,
+opt.relativenumber = true
+opt.number = true
 
-	-- line wrapping
-	wrap = false,
+-- tabs & indentation
+opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.expandtab = true -- expand tab to spaces
+opt.autoindent = true -- copy indent from current line when starting new one
 
-	-- search settings
-	ignorecase = true,
-	smartcase = true,
+opt.wrap = false
 
-	-- cursor line
-	cursorline = true,
+-- search settings
+opt.ignorecase = true -- ignore case when searching
+opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
-	-- appearance
-	termguicolors = true,
-	background = "dark",
-	signcolumn = "yes",
+opt.cursorline = true
 
-	-- backspace
-	backspace = "indent,eol,start",
+-- turn on termguicolors for tokyonight colorscheme to work
+-- (have to use iterm2 or any other true color terminal)
+opt.termguicolors = true
+opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
-	-- split windows
-	splitright = true,
-	splitbelow = true,
-}
-
-opt.iskeyword:append("-")
+-- backspace
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-opt.clipboard:append("unnamedplus")
+opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
--- loops through the options keyed table and assign each property and its value to the opt table
-for key, value in pairs(options) do
-	opt[key] = value
-end
+-- split windows
+opt.splitright = true -- split vertical window to the right
+opt.splitbelow = true -- split horizontal window to the bottom
+
+-- turn off swapfile
+opt.swapfile = false

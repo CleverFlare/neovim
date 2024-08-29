@@ -38,18 +38,16 @@ return {
 				"prismals",
 				"pyright",
 			},
-			-- auto-install configured servers (with lspconfig)
-			automatic_installation = true, -- not the same as ensure_installed
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettierd", -- prettier formatter
+				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				"pylint", -- python linter
-				"eslint_d", -- js linter
+				"pylint",
+				"eslint_d",
 			},
 		})
 	end,
