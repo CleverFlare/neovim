@@ -5,4 +5,7 @@ return {
   "gpanders/nvim-parinfer",
   "elkowar/yuck.vim",
   "mattn/emmet-vim",
+  "yuezk/vim-js",
+  "HerringtonDarkholme/yats.vim",
+  "maxmellon/vim-jsx-pretty",
 }
